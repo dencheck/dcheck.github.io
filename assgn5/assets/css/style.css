@@ -9,21 +9,35 @@ body{
 
 p {
 	color: black;
+	font-size: 13px;
 }
 
 h1 {
 	padding:0;
+	margin-top: -30px;
 }
 
 h2 {
 	margin-top: 0;
-
+	margin-bottom: 0;
 }
 
 h3 {
-	margin-top: -20px;
+	margin-top: 0px;
+}
 
+img {
 
+	max-width: 100%;
+}
+
+hr {
+	clear: both;
+}
+
+a {
+	text-decoration: none;
+	color: #B183FF;
 }
 
 #home {
@@ -44,18 +58,6 @@ h3 {
 	float: right;
 	top: 22px;
 	right: 25px;
-	background-color: #B183FF;
-	border: none;
-	color: white;
-}
-
-#cart:hover {
-	filter: brightness(90%);
-}
-
-a {
-	text-decoration: none;
-	color: #B183FF;
 }
 
 .link {
@@ -69,48 +71,48 @@ a {
 	color: #B183FF;
 }
 
-.gridContainer{
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	height:100px;
-}
+
 
 #shopGridContainer {
-
 	grid-template-columns: auto auto;
 	grid-template-rows: auto auto;
-	height: 600px;
-}
-
-.gridItemPhoto{
-	/*width: 225px;
-	height: 225px;*/
-	border-radius: 5px;
-	float: right;
-	max-width: 100%;
 	height: auto;
 }
 
-.featuredPhoto{
+.gridItemPhoto{
+	width: 100%;
+	height: auto;
+	border-radius: 5px;
+	float: right;
+}
 
+.featureLabel{
+	margin-bottom: 40px;
 }
 
 .gridItemShop{
 	border-style: solid;
 	border-color: #F1F1F1;
 	border-width: 1px;
-	padding: 10px;
-	height: content;
+	padding: 25px 10px 40px 10px;
+	height: auto;
 	position: relative;	
+	min-width: 350px;
+}
+
+.gridContainer{
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
 }
 
 .gridItem {
 	text-align: left;
-	min-width: 225px;
+	min-width: 175px;
+	/*max-width: 250px;*/
 	padding-left: 20px;
 	padding-right: 20px;
 	position:relative;
-	height: width;
+	height: content;
 }
 
 #photoException {
@@ -124,10 +126,6 @@ a {
 
 .bigHeader {
 	font-size: 14px;
-}
-
-p {
-	font-size: 13px;
 }
 
 .button {
@@ -147,6 +145,7 @@ p {
 #learnMore {
 	position: absolute;
 	bottom: 0;
+	margin-top: 30px;
 }
 
 .button:hover {
@@ -156,16 +155,28 @@ p {
 
 }
 
-
-
 .video{
-	height: 500px;
-	width: 100%;
+	width:100%;
+	min-width:1200px;
+	text-align: center;
+	position: relative;
+}
+
+#playButton {
+	position: absolute;
+	left: 50%;
+	top:50%;
+	width: 80px;
+	height: 80px;
+	margin-left: -40px;
+	margin-top: -40px;
+}
+
+#playButton:hover{
+	filter: brightness(90%);
 }
 
 .videoImage{
- height: 500px;
- object-fit: scale-down;
 
 }
 
@@ -198,6 +209,7 @@ p {
 .shopFooterItem {
 	background-color: #F1F1F1;
 	padding: 20px;
+	max-width: auto;
 
 }
 
@@ -260,4 +272,218 @@ p {
 	position: absolute;
 	bottom: 30px;
 	right: 30px;
+}
+
+.detailGridContainer {
+	display: grid;
+	grid-template-columns: 60% 40%;
+}
+
+.detailGridItem {
+	/*min-width: 300px;*/
+	position: relative;
+}
+
+.stuffingOption {
+	min-width: 350px;
+	border-style: solid;
+	border-color: #F1F1F1;
+	border-width: 1px 1px 0px 1px;
+	padding: 10px;
+	position:relative;
+}
+
+.stuffingRadio {
+	position: absolute;
+	float: right;
+	right: 25px;
+	bottom: 23px;
+}
+
+#cloudFoam {
+	border-width: 1px 1px 1px 1px;
+}
+
+.fabricGridContainer {
+	min-width: 350px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+
+.purchaseGridContainer {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 20px;
+}
+
+.fabricGridItem{
+	border: #F1F1F1 solid;
+	border-width: 1px 1px 1px 1px;	
+	padding: 5px 10px 18px 10px;
+	position:relative;
+	min-width: 164px;
+}
+
+#upperLeft {
+	border-width: 1px 0px 1px 1px;
+}
+
+#lowerLeft {
+	border-width: 0px 0px 1px 1px;
+}
+
+#lowerRight {
+	border-width: 0px 1px 1px 1px;
+}
+
+#upperRight {
+	border-width: 1px 1px 1px 1px;
+}
+
+.fabric {
+	position: absolute;
+	float: right;
+	right: 25px;
+	bottom: 8px;
+}
+
+#detailImage {
+	padding-right: 25px;
+	height: content;
+	max-width: 960px;
+}
+
+.detailRadio {
+	position:relative;
+	top: -70px;
+	left: 10px;
+}
+
+.itemName {
+	float: left;
+}
+
+.itemLabel {
+	max-width: 500px;
+	float: left;
+}
+
+.itemStats {
+	float: right;
+	font-variant: small-caps; 
+}
+
+.price {
+	float: right;
+}
+
+.stats {
+	float: right;
+}
+
+#monogramOption {
+	min-width: 0px
+}
+
+#monogramOption2 {
+	min-width: 200px;
+	border-width: 1px;
+}
+
+#monogramOption3 {
+	min-width: 200px;
+	border-width: 1px;
+	height: 102px;
+}
+
+#addToCart {
+	position: absolute;
+	float: right;
+	top: 16px;
+	right: 11px;
+	background-color: #B183FF;
+	border: none;
+	color: white;
+	padding: 25px;
+}
+
+#addToCart:hover {
+	filter: brightness(90%);
+}
+
+#customize {
+	position: absolute;
+	float: right;
+	top: 22px;
+	right: 25px;
+	background-color: #B183FF;
+	border: none;
+	color: white;
+}
+#customize:hover {
+	filter: brightness(90%);
+}
+
+
+.quantity {
+	float: left;
+	width: 50px;
+}
+
+.fabricFooterContainer {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.fabricFooterItem {
+	min-width: 100px;
+	text-align: center;
+	padding:25px;
+}
+
+#stuffingFooterContainer {
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.shopPillow {
+	width:200px;
+	left: 50%;
+	right:50%;
+	position: absolute;
+	margin-left: -100px;
+	margin-top: -100px;
+}
+
+#monogramButton {
+	position: absolute;
+	float: right;
+	top:13px;
+	right: 25px;
+	/*background-color: #B183FF;
+	border: none;
+	color: white;*/
+}
+
+#back {
+	position: absolute;
+	float: left;
+	top: 18px;
+	left: 18px;
+	background-color: none;
+	border: white solid 1px;
+	color: white;
+}
+
+#back:hover {
+	background-color: #B183FF;
+	color: white;
+	border: none;
+}
+
+.monoNone {
+	border: solid 1px #F1F1F1;
+	width: 15%;
+	padding: 8px;
+	margin: 4px;
 }
