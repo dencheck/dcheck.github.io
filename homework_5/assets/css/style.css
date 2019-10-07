@@ -4,7 +4,7 @@ html * {
 } 
 
 body{
-	background-color: ;
+
 }
 
 p {
@@ -40,6 +40,7 @@ a {
 	color: #B183FF;
 }
 
+/*logo which returns the user home*/
 #home {
 	float: left;
 	width:100px;
@@ -70,8 +71,6 @@ a {
 .link:hover {
 	color: #B183FF;
 }
-
-
 
 #shopGridContainer {
 	grid-template-columns: auto auto;
@@ -112,7 +111,6 @@ a {
 	padding-left: 20px;
 	padding-right: 20px;
 	position:relative;
-	height: content;
 }
 
 #photoException {
@@ -128,6 +126,8 @@ a {
 	font-size: 14px;
 }
 
+
+/*general button class*/
 .button {
 	border-color: #B183FF;
 	border-width: 1px;
@@ -155,6 +155,7 @@ a {
 
 }
 
+/*'video' banner on home page*/
 .video{
 	width:100%;
 	min-width:1200px;
@@ -187,7 +188,7 @@ a {
 	padding-bottom: 15px;
 }
 
-.navbar {
+.navbar /*appears on each page, holds nav elements*/{
 	color: #B183FF;
 	text-align: center;
 	padding: 25px;
@@ -209,7 +210,6 @@ a {
 .shopFooterItem {
 	background-color: #F1F1F1;
 	padding: 20px;
-	max-width: auto;
 
 }
 
@@ -217,7 +217,7 @@ a {
 	padding-left: 10px;
 }
 
-.radio /*after http://www.tipue.com/blog/radio-checkbox*/ {
+.radio /*colored , solid radio buttons after http://www.tipue.com/blog/radio-checkbox*/ {
 	-webkit-appearance: none;
      -moz-appearance: none;
      appearance: none;
@@ -325,6 +325,8 @@ a {
 	min-width: 164px;
 }
 
+
+/*these 4 IDs keep strokes on 2x2 grids from overlapping*/
 #upperLeft {
 	border-width: 1px 0px 1px 1px;
 }
@@ -350,7 +352,6 @@ a {
 
 #detailImage {
 	padding-right: 25px;
-	height: content;
 	max-width: 960px;
 }
 
@@ -421,6 +422,7 @@ a {
 	border: none;
 	color: white;
 }
+
 #customize:hover {
 	filter: brightness(90%);
 }
@@ -460,9 +462,6 @@ a {
 	float: right;
 	top:13px;
 	right: 25px;
-	/*background-color: #B183FF;
-	border: none;
-	color: white;*/
 }
 
 #back {
@@ -470,7 +469,6 @@ a {
 	float: left;
 	top: 18px;
 	left: 18px;
-	background-color: none;
 	border: white solid 1px;
 	color: white;
 }
