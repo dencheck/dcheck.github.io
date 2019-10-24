@@ -1,3 +1,5 @@
+
+//these functions update the product description text when the colored radio buttons are clicked
 function newGrey () {
 	document.getElementById("fabricDisplay").textContent = "Grey";
 	console.log("Gray");
@@ -18,6 +20,8 @@ function newTeal () {
 	console.log("Hellooooooo");
 	}
 
+
+//these functions update the product description text and price when the stuffing radio buttons are clicked
 function newDuck () {
 	document.getElementById("stuffingDisplay").textContent = "Duck Down";
 	document.getElementById("price1").textContent = "99.99";
@@ -36,10 +40,15 @@ function newCloud () {
 	document.getElementById("addToCartPrice").textContent = "109.98";
 	}
 
+
+
+// updates the price in the add to cart button
 function priceUpdate () {
 	let originalPrice = document.getElementById("addToCartPrice").textContent = parseFloat(document.getElementById("quantity").value) * parseFloat(document.getElementById("price1").textContent);
 }
 
+
+// adds a number to the cart button to indicate items in cart, and throws an alert when the user has not selected necessary options
 var cartQuantity = 0;
 
 function cartUpdate () {
