@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- load the google fonts and point to the style sheet -->	
+		<meta charset="UTF-8">	
+		<link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+		<script type="text/javascript" src="assets/js/script.js"></script>
+		<title>Fluff n' Stuff - Details</title>
+	</head>
+
+	<header>
+
+		<div class="navbar">
+			<a href="index.html"><img src="assets/fnslogo.png" id="home" alt="FluffnStuff Logo"></a>
+			<a class="link" href="shop.html">Shop</a>
+			<a class="link" href="#about">About</a>
+			<a class="link" href="#track">Track</a>
+			<button id="cart" class ="button">Cart</button>
+		</div>			
+
+	</header>
+
+	<body>
+		<!-- Main page grid:  -->
+		<div class="detailGridContainer">
+			<!--left side of grid with large image and info: -->
+			<div class="detailGridItem" id="detailImage">
+				<img src="assets/fluffnstuff-01.jpg" class="detailPhoto" alt="pink pillow">
+				<a class ="button" id="back" href="shop.html"> &lt; Back to shop</a>	
+				<!-- div containing color preview radio buttons:
+				<div class="detailRadio">	
+					<input class="radio" type="radio" name = pillowColor1 id="greyColor">
+					<input class="radio" type="radio" name = pillowColor1 id="orangeColor" checked>
+					<input class="radio" type="radio" name = pillowColor1 id="yellowColor">
+					<input class="radio" type="radio" name = pillowColor1 id="tealColor">
+				</div>-->
+				<!-- item detail info: -->
+				<br><br>
+				<div>
+					<h1 class="itemName" id="Cumulus"> Cumulus</h1>
+					<h1 class="price" id="price1">99.99</h1>
+					<h1 class="itemName" id="fabricDisplay"></h1>
+					<h1 class="itemName" id="stuffingDisplay"></h1>
+				</div>
+
+				<br>
+				<hr>
+				<p class="itemLabel">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, datat non proident.</p>
+				<p class="itemStats">
+					STATS<br>
+					cupidatat non proident 1.0<br>
+					cupidatat non proident 1.0<br>
+					cupidatat non proident 1.0<br>
+					cupidatat non proident 1.0<br>
+				</p>
+			</div>
+			<!-- right side of grid where user chooses options: -->
+			<div class="detailGridItem">
+				<!-- each "stuffing option" is an outlined cell: -->
+				<div class = stuffingOption>
+					<h2>Choose Stuffing</h2> 
+				</div>
+				<div class = stuffingOption>
+					<p>Duck Down</p><input onclick = "newDuck(); priceUpdate();" class="stuffingRadio" type="radio" name="stuffing">
+				</div>
+				<div class = stuffingOption>
+					<p>Alpaca Wool (+2.99)</p><input onclick = "newWool(); priceUpdate();" class="stuffingRadio" type="radio" name="stuffing">
+				</div>
+				<div class = stuffingOption id="cloudFoam">
+					<p>Cloud Foam (+9.99)</p>
+					<input onclick = "newCloud(); priceUpdate();"class= "stuffingRadio" id="cfRadio" type="radio" name="stuffing">
+				</div>
+				<br>
+				<!-- fabric options start here: -->
+				<div class = stuffingOption>
+					<h2>Choose Fabric</h2> 
+				</div>
+				<!-- this is the 2x2 grid where each cell contains a fabric option: -->
+				<div class="fabricGridContainer">
+					<div class="fabricGridItem" id="upperLeft">
+						<input onclick = "newGrey();" class="radio" type="radio" name = pillowColor1 id="greyColor" value ="gray">
+						<p class="fabric">Grey</p>
+					</div>
+					<div class="fabricGridItem" id="upperRight">
+						<input onclick = "newOrange();" class="radio" type="radio" name = pillowColor1 id="orangeColor">
+						<p class="fabric">Orange</p>
+					</div>
+					<div class="fabricGridItem" id="lowerLeft">
+						<input onclick = "newYellow();" class="radio" type="radio" name = pillowColor1 id="yellowColor">
+						<p class="fabric">Yellow</p>
+					</div>
+					<div class="fabricGridItem" id="lowerRight">
+						<input onclick = "newTeal();" class="radio" type="radio" name = pillowColor1 id="tealColor">
+						<p class="fabric">Teal</p>
+					</div>
+				</div>
+				<br>
+				<!-- another grid to hold the two last options modules, monogram and add to cart: -->
+				<div class="purchaseGridContainer">
+					<!-- each of these 2 divs is one of the modules: -->
+					<div>
+						<div class = "stuffingOption" id="monogramOption">
+							<h2>Monogram</h2> 
+						</div>
+						<div class = "stuffingOption" id="monogramOption2">
+							<p class="monoNone">None</p><button onclick="newText();" id="monogramButton" class ="button">Customize</button>
+						</div>
+					</div>
+
+					<div>
+						<div class = "stuffingOption" id="monogramOption3">
+							<p>Quantity:</p> <input min= "1" id = "quantity" onChange = "priceUpdate();" type="number" class = "quantity" value="1">
+							<button onclick = "cartUpdate();" id="addToCart" class ="button">Add to Cart<div id="addToCartPrice">99.99</div></button>
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

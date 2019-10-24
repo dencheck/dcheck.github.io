@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- load the google fonts and point to the style sheet -->
+		<meta charset="UTF-8">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+		<title>Fluff n' Stuff</title>
+	</head>
+
+	<header>
+
+		<div class="navbar">
+			<a href="index.html"><img src="assets/fnslogo.png" id="home"></a>
+			<a class="link" href="shop.html">Shop</a>
+			<a class="link" href="#about">About</a>
+			<a class="link" href="#track">Track</a>
+			<button id="cart" class ="button">Cart</button>
+		</div>			
+	</header>
+
+	<body>
+		<!-- large banner where a brand video will be placed: -->
+		<div class = "video">
+			<!-- play button that sticks to the center of the video banner: -->
+			<img src="assets/playButton.png" id="playButton" alt="playButton" >
+			<!-- image itself -->
+			<img class="videoImage" src="assets/indexImage2.jpg" alt="videoBanner">
+		</div><br>
+
+		<!-- bottom section with featured items: -->
+		<h3> Featured Pillows</h3>
+		<!-- grid with 6 items, 3 photos and 3 cells with descriptions and button: -->
+		<div class="gridContainer">
+			<div class="gridItem" id="photoException">
+				<img src="assets/pinkPillow.jpg" class= "gridItemPhoto" alt="pink pillow">
+			</div>
+			<div class="gridItem">
+				<h2>Cumulus</h2>
+				<h3>$99.99</h3>
+				<p>Check out today's featured pillow, with several great features.</p>
+				<br>
+				<a class ="button" id="learnMore" href="detail.html">Learn more</a>	
+			</div>
+
+			<div class="gridItem" id="photoException">
+				<img src="assets/greyPillow.jpg" class= "gridItemPhoto" alt="grey pillow">
+			</div>
+
+			<div class="gridItem">
+				<h2>Nimbus</h2>
+				<h3>$99.99</h3>
+				<p class="featureLabel">Check out today's featured pillow, with several great features.</p>
+				<br>
+				<a class ="button" id="learnMore" href="detail2.html">Learn more</a>	
+			</div>
+
+
+			<div class="gridItem" id="photoException">
+				<img src="assets/roundPillow.jpg" class= "gridItemPhoto" alt="round pillow">
+			</div>
+			<div class="gridItem">
+				<h2>Stratus</h2>
+				<h3>$99.99</h3>
+				<p>Check out today's featured pillow, with several great features.</p><br>
+				<a class ="button" id="learnMore" href="detail3.html">Learn more</a>	
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="assets/js/script.js"></script>
+</html>

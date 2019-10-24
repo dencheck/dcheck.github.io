@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- load the google fonts and point to the style sheet -->	
+		<meta charset="UTF-8">	
+		<link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+		<title>Fluff n' Stuff - Details</title>
+	</head>
+
+	<header>
+
+		<div class="navbar">
+			<a href="index.html"><img src="assets/fnslogo.png" id="home" alt="FluffnStuff Logo"></a>
+			<a class="link" href="shop.html">Shop</a>
+			<a class="link" href="#about">About</a>
+			<a class="link" href="#track">Track</a>
+			<button id="cart" class ="button">Cart</button>
+		</div>			
+
+	</header>
+
+	<body>
+		<!-- Main page grid:  -->
+		<div class="detailGridContainer">
+			<!--left side of grid with large image and info: -->
+			<div class="detailGridItem" id="yourCart">
+				<h2>Your cart</h2><br>	
+				<div class = "stuffingOption" id="monogramOption3">
+						<img src="assets/greyPillow.jpg" class="cartImage">
+						<div class = "cartItemLeft">
+							<h3>Quantity:</h3> 
+							<p>Fabric: Fabric 1</p>
+							<p>Stuffing: Stuffing 1</p>
+						</div>
+						<div class = "cartItemQuant">
+							<p>Quantity:</p> <input type="number" class = "quantity" value="1">
+						</div>
+						<div class = "cartItemRight">
+							<h3>$99.99</h3> 
+							<br>
+							<p>Edit | Remove</p>
+						</div>
+				</div>
+				<div class = "stuffingOption" id="monogramOption3">
+						<img src="assets/greyPillow.jpg" class="cartImage">
+						<div class = "cartItemLeft">
+							<h3>Quantity:</h3> 
+							<p>Fabric: Fabric 1</p>
+							<p>Stuffing: Stuffing 1</p>
+						</div>
+						<div class = "cartItemQuant">
+							<p>Quantity:</p> <input type="number" class = "quantity" value="1">
+						</div>
+						<div class = "cartItemRight">
+							<h3>$99.99</h3> 
+							<br>
+							<p>Edit | Remove</p>
+						</div>
+				</div>
+				<div class = "stuffingOption" id="monogramOption3">
+						<img src="assets/greyPillow.jpg" class="cartImage">
+						<div class = "cartItemLeft">
+							<h3>Quantity:</h3> 
+							<p>Fabric: Fabric 1</p>
+							<p>Stuffing: Stuffing 1</p>
+						</div>
+						<div class = "cartItemQuant">
+							<p>Quantity:</p> <input type="number" class = "quantity" value="1">
+						</div>
+						<div class = "cartItemRight">
+							<h3>$99.99</h3> 
+							<br>
+							<p>Edit | Remove</p>
+						</div>
+				</div>
+			
+			</div>
+			<!-- right side of grid where user chooses options: -->
+			<div class="detailGridItem">
+				<!-- each "stuffing option" is an outlined cell: -->
+				<div class = cartSummary>
+					<h2>Summary</h2> 
+					<br>
+					<p class = "cartText">Promo code:</p> 
+					<br><br>
+					<input type="text" class = "promoCode" value="">
+					<br>
+					<br>
+					<p class = "cartText">Subtotal:</p>
+					<p class = "cartTextRight">$99.99</p>
+					<br>
+					<div style="clear: both;"></div>
+					<p class = "cartText">Shipping:</p>
+					<p class = "cartTextRight">$0.00</p>
+   					<br>
+   					<div style="clear: both;"></div>
+					<p class = "cartText">Tax:</p>
+					<p class = "cartTextRight">$0.00</p>
+					<br><br><br><br><br><br><br><br><br>
+					<hr>
+					<div style="clear: both;"></div>
+					<h3 class = "cartText">Total:</p>
+					<h3 class = "cartTextRight">$99.99</p>
+					<div style="clear: both;"></div>	
+					<br>					
+					<button id="checkOut" class ="button">Check Out</button> 
+				</div>
+			
+				</div>
+				<br>
+				<!-- another grid to hold the two last options modules, monogram and add to cart: -->
+				<div class="purchaseGridContainer">
+					<!-- each of these 2 divs is one of the modules: -->
+			
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script type="text/javascript" src="assets/js/script.js"></script>
+</html>
