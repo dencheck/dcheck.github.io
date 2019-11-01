@@ -585,3 +585,41 @@ a {
 .fabricStuffing {
 	text-align: left;
 }
+
+
+.cartItem {
+	border-style: solid;
+	border-color: #F1F1F1;
+	padding: 10px;
+	position:relative;
+	min-width: 200px;
+	border-width: 1px;
+	height: 102px;
+}
+
+#oneCartItem {
+	min-width: 200px;
+	border-width: 1px;
+	height: 102px;
+}
+
+#holder {
+	min-width: 200px;
+	border-width: 1px;
+	height: 102px;
+}
+
+#carouselImage{
+	display: inline-block;
+	width: 200px;
+	position: absolute;
+	float: left;
+}
+
+.carouselText{
+	position: absolute;
+}
+
+.carouselButton{
+	position: relative;
+}

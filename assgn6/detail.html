@@ -16,7 +16,7 @@
 			<a class="link" href="shop.html">Shop</a>
 			<a class="link" href="#about">About</a>
 			<a class="link" href="#track">Track</a>
-			<button id="cart" class ="button">Cart</button>
+			<a href="cart.html" id="cart" class ="button">Cart</a>
 		</div>			
 
 	</header>
@@ -111,12 +111,20 @@
 					<div>
 						<div class = "stuffingOption" id="monogramOption3">
 							<p>Quantity:</p> <input min= "1" id = "quantity" onChange = "priceUpdate();" type="number" class = "quantity" value="1">
-							<button onclick = "cartUpdate();" id="addToCart" class ="button">Add to Cart<div id="addToCartPrice">99.99</div></button>
+							<button onclick = "cartUpdate(); addToCart();" id="addToCart" class ="button">Add to Cart<div id="addToCartPrice">99.99</div></button>
 						
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+				<br>
+				<div class= "carouselDiv">
+					<strong>Recommended Items</strong>
+					<br>
+					<img id="carouselImage" src="assets/carouselImage0.jpg">
+					<button onclick="prevCarousel();" class = "carouselButton"> &lt Prev </button>
+					<button onclick="nextCarousel();" class = "carouselButton"> Next &gt </button>
+			   </div>
 	</body>
 </html>

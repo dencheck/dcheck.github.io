@@ -20,61 +20,12 @@
 
 	</header>
 
-	<body>
+	<body onload = "loadCart();">
 		<!-- Main page grid:  -->
 		<div class="detailGridContainer">
 			<!--left side of grid with large image and info: -->
 			<div class="detailGridItem" id="yourCart">
 				<h2>Your cart</h2><br>	
-				<div class = "stuffingOption" id="monogramOption3">
-						<img src="assets/greyPillow.jpg" class="cartImage">
-						<div class = "cartItemLeft">
-							<h3>Quantity:</h3> 
-							<p>Fabric: Fabric 1</p>
-							<p>Stuffing: Stuffing 1</p>
-						</div>
-						<div class = "cartItemQuant">
-							<p>Quantity:</p> <input type="number" class = "quantity" value="1">
-						</div>
-						<div class = "cartItemRight">
-							<h3>$99.99</h3> 
-							<br>
-							<p>Edit | Remove</p>
-						</div>
-				</div>
-				<div class = "stuffingOption" id="monogramOption3">
-						<img src="assets/greyPillow.jpg" class="cartImage">
-						<div class = "cartItemLeft">
-							<h3>Quantity:</h3> 
-							<p>Fabric: Fabric 1</p>
-							<p>Stuffing: Stuffing 1</p>
-						</div>
-						<div class = "cartItemQuant">
-							<p>Quantity:</p> <input type="number" class = "quantity" value="1">
-						</div>
-						<div class = "cartItemRight">
-							<h3>$99.99</h3> 
-							<br>
-							<p>Edit | Remove</p>
-						</div>
-				</div>
-				<div class = "stuffingOption" id="monogramOption3">
-						<img src="assets/greyPillow.jpg" class="cartImage">
-						<div class = "cartItemLeft">
-							<h3>Quantity:</h3> 
-							<p>Fabric: Fabric 1</p>
-							<p>Stuffing: Stuffing 1</p>
-						</div>
-						<div class = "cartItemQuant">
-							<p>Quantity:</p> <input type="number" class = "quantity" value="1">
-						</div>
-						<div class = "cartItemRight">
-							<h3>$99.99</h3> 
-							<br>
-							<p>Edit | Remove</p>
-						</div>
-				</div>
-			
 			</div>
 			<!-- right side of grid where user chooses options: -->
 			<div class="detailGridItem">
@@ -88,20 +39,20 @@
 					<br>
 					<br>
 					<p class = "cartText">Subtotal:</p>
-					<p class = "cartTextRight">$99.99</p>
+					<p class = "cartTextRight">-</p>
 					<br>
 					<div style="clear: both;"></div>
 					<p class = "cartText">Shipping:</p>
-					<p class = "cartTextRight">$0.00</p>
+					<p class = "cartTextRight">-</p>
    					<br>
    					<div style="clear: both;"></div>
 					<p class = "cartText">Tax:</p>
-					<p class = "cartTextRight">$0.00</p>
+					<p class = "cartTextRight">-</p>
 					<br><br><br><br><br><br><br><br><br>
 					<hr>
 					<div style="clear: both;"></div>
 					<h3 class = "cartText">Total:</p>
-					<h3 class = "cartTextRight">$99.99</p>
+					<h3 class = "cartTextRight">-</p>
 					<div style="clear: both;"></div>	
 					<br>					
 					<button id="checkOut" class ="button">Check Out</button> 

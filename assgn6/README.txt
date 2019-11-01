@@ -1,0 +1,2 @@
+I constructed an image carousel as an attempt for extra credit—at the bottom of details page, a “Recommended Items” section shows an image and allows the user to move forward or backward through 4 images using buttons. 
+This is accomplished using a counter variable in JS and document.getElementbyID(“element”).src
