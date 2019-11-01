@@ -85,6 +85,7 @@ function newWool () {
 	document.getElementById("addToCartPrice").textContent = "102.98";
 	}
 
+
 function newCloud () {
 	document.getElementById("stuffingDisplay").textContent = "Cloud Foam";
 	document.getElementById("price1").textContent = "109.98";
