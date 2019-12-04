@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- load the google fonts and point to the style sheet -->
+		<meta charset="UTF-8">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+		<title>Fluff n' Stuff</title>
+	</head>
+
+	<header>
+
+
+	</header>
+
+	<body>
+
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light justify-content-center" style="background-color: #F2F2F2; height:80px;">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto position-absolute" style="position: absolute;
+    left: 50%; transform: translatex(-50%);">
+          <li class="nav-item px-2">
+            <img class="navIcon" src="assets/Icon-11.svg" style="height: 50px;" data-sort-by="random">
+          </li>
+          <li class="nav-item px-2">
+            <img class="navIcon" src="assets/Icon-10.svg" style="height: 50px;">
+          </li>
+          <li class="nav-item px-2">
+            <img class="button" src="assets/Icon-12.svg" style="height: 50px;">
+          </li>
+          <li class="nav-item px-2">
+            <button id="color-picker-3" class="btn" style="margin-top: 12px; height: 26px; width: 26px; background-color: red; border-radius: 50%;"> 
+            </button>
+          </li>
+          <li class="nav-item px-2">
+            <div id="sorts" class="button-group">  
+              <button class="button" data-sort-by="random" style="height: 1px;">random</button>
+            </div>
+          </li>          
+        </ul>
+        <!--Search bar-1
+        <!--<form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>-->
+      </div>
+    </nav>
+
+    <div class="navbar">
+
+      <div id="sorts" class="button-group">  
+        <button class="button is-checked" data-sort-by="original-order">original order</button>
+        <button class="button" data-sort-by="random">random</button>
+        <button class="button" data-sort-by="name">name</button>
+        <button class="button" data-sort-by="symbol">symbol</button>
+        <button class="button" data-sort-by="number">number</button>
+        <button class="button" data-sort-by="date">date</button>
+        <button class="button" data-sort-by="category">category</button>
+        <button class="button" data-sort-by="color">color</button>
+      </div>
+
+      <div id="filters" class="button-group">  
+        <button class="button is-checked" data-filter="*">show all</button>
+        <button class="button" data-filter=".metal">metal</button>
+        <button class="button" data-filter=".transition">transition</button>
+        <button class="button" data-filter=".alkali, .alkaline-earth">alkali and alkaline-earth</button>
+        <button class="button" data-filter=":not(.transition)">not transition</button>
+        <button class="button" data-filter=".metal:not(.transition)">metal but not transition</button>
+        <button class="button" data-filter="numberGreaterThan50">number > 50</button>
+        <button class="button" data-filter="ium">name ends with &ndash;ium</button>
+      </div>
+    </div>    
+
+    <div class="row">
+    <div id="div-bg"></div>
+    <input type='text' id="basic" />
+    <button id="btn-color-picker" class="btn btn-primary btn-md">
+Pick
+    </button>
+</div>
+
+
+
+<div class="grid">
+
+	<div class="element-item metal" data-category="transition">
+  		<img class = "iconImage" src = "assets/Icon_redRibbon.png">
+  		</img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="date">2019</p>
+    <p class="color">1</p>
+  </div>
+
+ <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_purpleInfo.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="date">2018</p>
+    <p class="color">95</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_cyanPicture.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_yellowMic.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_orangeCalendar.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">10</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_greenMegaphone.png">
+      </img>
+    <h3 class="name">Leadium</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">40</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_blueNetwork.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">70</p>
+  </div>
+
+    <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_magentaFlashcards.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_redRibbon.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">1</p>
+  </div>
+
+ <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_purpleInfo.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">95</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_cyanPicture.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_yellowMic.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_orangeCalendar.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">10</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_greenMegaphone.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">40</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_blueNetwork.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">70</p>
+  </div>
+
+    <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_magentaFlashcards.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_redRibbon.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">1</p>
+  </div>
+
+ <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_purpleInfo.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">95</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_cyanPicture.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_yellowMic.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_orangeCalendar.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">10</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_greenMegaphone.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">40</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_blueNetwork.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">70</p>
+  </div>
+
+    <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_magentaFlashcards.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_redRibbon.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">1</p>
+  </div>
+
+ <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_purpleInfo.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">95</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_cyanPicture.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_yellowMic.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_orangeCalendar.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">10</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_greenMegaphone.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">40</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_blueNetwork.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">70</p>
+  </div>
+
+    <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/Icon_magentaFlashcards.png">
+      </img>
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+    <p class="color">99</p>
+  </div>
+
+  
+</div>
+
+
+
+
+ 
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	</body>
+  <script type ="text/javascript" src="assets/js/jquery.js"></script>
+  <!--<script type ="text/javascript" src="bootstrap-colorpicker.js"></script>-->
+  <script type ="text/javascript" src="assets/js/spectrum.js"></script>
+
+	<script type ="text/javascript" src="assets/js/isotope.js"></script>
+	<script type ="text/javascript" src="assets/js/script.js"></script>
+
+</html>
