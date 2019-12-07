@@ -8,7 +8,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
-		<title>Fluff n' Stuff</title>
+		<title>Icon Explorer</title>
 	</head>
 
 	<header>
@@ -20,71 +20,34 @@
 
 
     <nav class="navbar sticky-top navbar-expand-lg navbar-light justify-content-center" style="background-color: #F2F2F2; height:80px;">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Icon Explorer</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto position-absolute" style="position: absolute;
-    left: 50%; transform: translatex(-50%);">
+        <ul class="navbar-nav mr-auto position-absolute button-group" id="sorts" style="position: absolute;
+    left: 50%; transform: translatex(-50%); margin-top: 1px;">
           <li class="nav-item px-2">
-            <img class="navIcon" src="assets/Icon-11.svg" style="height: 50px;" data-sort-by="random">
-          </li>
+              <button class="btn" data-sort-by="random" style="height: 50px; background-color: none;"><img class="img" src="assets/Icon-11.svg" style="height: 50px;"></button>
+          </li>   
           <li class="nav-item px-2">
-            <img class="navIcon" src="assets/Icon-10.svg" style="height: 50px;">
-          </li>
+              <button class="btn" data-sort-by="color" style="height: 50px; background-color: none;"><img class="img" src="assets/Icon-10.svg" style="height: 50px;"></button>
+          </li>   
           <li class="nav-item px-2">
-            <img class="button" src="assets/Icon-12.svg" style="height: 50px;">
-          </li>
+              <button class="btn" data-sort-by="date" style="height: 50px; background-color: none;"><img class="img" src="assets/Icon-12.svg" style="height: 50px;"></button>
+          </li>   
           <li class="nav-item px-2">
-            <div class="color-wrapper">
-            <!--<p>Choose color (# hex)</p>-->
-            <!--<input type="text" name="custom_color" placeholder="#FFFFFF" id="pickcolor" class="call-picker">-->
-              <div class="color-holder call-picker"></div>
-              <div class="color-picker" id="color-picker" style="display: none"></div>
-            </div>
-          </li>        
+            <button id="color-picker-7" class="btn" style="margin-top: 12px; height: 26px; width: 26px; background-color: red; border-radius: 50%;"> 
+            </button>
+          </li>       
         </ul>
-        <!--Search bar-1
-        <!--<form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>-->
       </div>
     </nav>
 
-    <div class="navbar">
-
-      <div id="sorts" class="button-group">  
-        <button class="button is-checked" data-sort-by="original-order">original order</button>
-        <button class="button" data-sort-by="random">random</button>
-        <button class="button" data-sort-by="name">name</button>
-        <button class="button" data-sort-by="symbol">symbol</button>
-        <button class="button" data-sort-by="number">number</button>
-        <button class="button" data-sort-by="date">date</button>
-        <button class="button" data-sort-by="category">category</button>
-        <button class="button" data-sort-by="color">color</button>
-      </div>
-
-      <div id="filters" class="button-group">  
-        <button class="button is-checked" data-filter="*">show all</button>
-        <button class="button" data-filter=".metal">metal</button>
-        <button class="button" data-filter=".transition">transition</button>
-        <button class="button" data-filter=".alkali, .alkaline-earth">alkali and alkaline-earth</button>
-        <button class="button" data-filter=":not(.transition)">not transition</button>
-        <button class="button" data-filter=".metal:not(.transition)">metal but not transition</button>
-        <button class="button" data-filter="numberGreaterThan50">number > 50</button>
-        <button class="button" data-filter="ium">name ends with &ndash;ium</button>
-      </div>
-    </div>    
 
     <div class="row">
     <div id="div-bg"></div>
-    <input type='text' id="basic" />
-    <button id="btn-color-picker" class="btn btn-primary btn-md">
-Pick
-    </button>
 </div>
 
 

@@ -6,9 +6,11 @@
 		<!-- load the google fonts and point to the style sheet -->
 		<meta charset="UTF-8">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"/>
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
 		<title>Icon Explorer</title>
+
 	</head>
 
 	<header>
@@ -27,25 +29,33 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto position-absolute button-group" id="sorts" style="position: absolute;
-    left: 50%; transform: translatex(-50%); margin-top: 1px;">
-          <li class="nav-item px-2">
-              <button class="btn" data-sort-by="random" style="height: 50px; background-color: none;"><img class="img" src="assets/Icon-11.svg" style="height: 50px;"></button>
+    left: 50%; transform: translatex(-50%); margin-top: 1px; z-index: 10;">
+          <li class="nav-item px-3">
+              <button class="btn" data-sort-by="random" style="height: 50px; width: 50px; background-color: none;"><img class="img" src="assets/Icon-11.svg" style="height: 50px;"></button>
           </li>   
-          <li class="nav-item px-2">
-              <button class="btn" data-sort-by="color" style="height: 50px; background-color: none;"><img class="img" src="assets/Icon-10.svg" style="height: 50px;"></button>
+          <li class="nav-item px-3">
+              <button class="btn" data-sort-by="color" style="height: 50px; width: 50px; background-color: none;"><img class="img" src="assets/Icon-10.svg" style="height: 50px;"></button>
           </li>   
-          <li class="nav-item px-2">
-              <button class="btn" data-sort-by="date" style="height: 50px; background-color: none;"><img class="img" src="assets/Icon-12.svg" style="height: 50px;"></button>
+          <li class="nav-item px-3">
+              <button class="btn" data-sort-by="date" style="height: 50px; width: 50px; background-color: none;"><img class="img" src="assets/Icon-12.svg" style="height: 50px;"></button>
           </li>   
-          <li class="nav-item px-2">
+          <!--<li class="nav-item px-2">
             <button id="color-picker-7" class="btn" style="margin-top: 12px; height: 26px; width: 26px; background-color: red; border-radius: 50%;"> 
             </button>
+          </li>-->   
+          <li class="nav-item px-3">
+            <div class="color-wrapper">
+              <!--<p>Choose color (# hex)</p>-->
+              <!--<input type="text" name="custom_color" placeholder="#FFFFFF" id="pickcolor" class="call-picker">-->
+              <div class="color-holder call-picker"></div>
+              <!--<div class="color-picker" id="color-picker" style="display: none"></div>-->
+            </div>
           </li>       
         </ul>
       </div>
     </nav>
 
-
+<div class="color-picker" id="color-picker" style="display: none"></div>
     <div class="row">
     <div id="div-bg"></div>
 </div>
@@ -385,15 +395,15 @@
  
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-	</body>
-  <script type ="text/javascript" src="assets/js/jquery.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
   <!--<script type ="text/javascript" src="bootstrap-colorpicker.js"></script>-->
   <script type ="text/javascript" src="assets/js/spectrum.js"></script>
+  <script type ="text/javascript" src="assets/js/isotope.js"></script>
+  <script type ="text/javascript" src="assets/js/script.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-	<script type ="text/javascript" src="assets/js/isotope.js"></script>
-	<script type ="text/javascript" src="assets/js/script.js"></script>
+	</body>
+
 
 </html>
