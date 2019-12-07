@@ -3,10 +3,9 @@
 	<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!-- load the google fonts and point to the style sheet -->
+		<!-- load the google fonts and point to the style sheets -->
 		<meta charset="UTF-8">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins&display=swap" rel="stylesheet">
-    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"/>
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
 		<title>Icon Explorer</title>
@@ -20,14 +19,17 @@
 
 	<body>
 
-
+<!--navbar from Bootstrap documentation-->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light justify-content-center" style="background-color: #F2F2F2; height:80px;">
       <a class="navbar-brand" href="#">Icon Explorer</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
+
+<!--collapse navbar at small size-->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <!--nav items go in here-->
         <ul class="navbar-nav mr-auto position-absolute button-group" id="sorts" style="position: absolute;
     left: 50%; transform: translatex(-50%); margin-top: 1px; z-index: 10; background-color: #f2f2f2;">
           <li class="nav-item px-3">
@@ -38,11 +40,7 @@
           </li>   
           <li class="nav-item px-3">
               <button class="btn" data-sort-by="date" style="height: 50px; width: 50px; background-color: none;"><img class="img" src="assets/Icon-12.svg" style="height: 50px;"></button>
-          </li>   
-          <!--<li class="nav-item px-2">
-            <button id="color-picker-7" class="btn" style="margin-top: 12px; height: 26px; width: 26px; background-color: red; border-radius: 50%;"> 
-            </button>
-          </li>-->   
+          </li>    
           <li class="nav-item px-3">
             <div class="color-wrapper">
               <!--<p>Choose color (# hex)</p>-->
@@ -61,14 +59,14 @@
 </div>
 
 
-
+<!--grid items, dynamic sort with Isotope functions-->
 <div class="grid">
 
 	<div class="element-item metal" data-category="transition">
   		<img class = "iconImage" src = "assets/Icons_redRibbon.png">
   		</img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2018</p>
     <p class="color">1</p>
   </div>
 
@@ -84,7 +82,7 @@
       <img class = "iconImage" src = "assets/Icons_cyanPicture.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2018</p>
     <p class="color">60</p>
   </div>
 
@@ -92,7 +90,7 @@
       <img class = "iconImage" src = "assets/Icons_yellowMic.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2018</p>
     <p class="color">30</p>
   </div>
 
@@ -100,7 +98,7 @@
       <img class = "iconImage" src = "assets/Icons_orangeCalendar.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2018</p>
     <p class="color">10</p>
   </div>
 
@@ -108,7 +106,7 @@
       <img class = "iconImage" src = "assets/Icons_greenMegaphone.png">
       </img>
     <h3 class="name">Leadium</h3>
-    <p class="date">2019</p>
+    <p class="date">2018</p>
     <p class="color">40</p>
   </div>
 
@@ -116,7 +114,7 @@
       <img class = "iconImage" src = "assets/Icons_blueNetwork.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2018</p>
     <p class="color">70</p>
   </div>
 
@@ -124,7 +122,7 @@
       <img class = "iconImage" src = "assets/Icons_magentaFlashcards.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2018</p>
     <p class="color">98</p>
   </div>
 
@@ -148,7 +146,7 @@
       <img class = "iconImage" src = "assets/Icons-15.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2017</p>
     <p class="color">55</p>
   </div>
 
@@ -172,7 +170,7 @@
       <img class = "iconImage" src = "assets/Icons-18.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2018</p>
     <p class="color">95</p>
   </div>
   
@@ -180,7 +178,7 @@
       <img class = "iconImage" src = "assets/Icons-19.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2018</p>
     <p class="color">95</p>
   </div>
 
@@ -188,7 +186,7 @@
       <img class = "iconImage" src = "assets/Icons-20.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2018</p>
     <p class="color">40</p>
   </div>
 
@@ -196,7 +194,7 @@
       <img class = "iconImage" src = "assets/Icons-21.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2020</p>
     <p class="color">50</p>
   </div>
 
@@ -204,7 +202,7 @@
       <img class = "iconImage" src = "assets/Icons-22.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2020</p>
     <p class="color">50</p>
   </div>
   
@@ -212,7 +210,7 @@
       <img class = "iconImage" src = "assets/Icons-23.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2016</p>
     <p class="color">99</p>
   </div>
 
@@ -220,7 +218,7 @@
       <img class = "iconImage" src = "assets/Icons-24.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2016</p>
     <p class="color">99</p>
   </div>
   
@@ -228,7 +226,7 @@
       <img class = "iconImage" src = "assets/Icons-25.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2016</p>
     <p class="color">99</p>
   </div>
 
@@ -236,7 +234,7 @@
       <img class = "iconImage" src = "assets/Icons-26.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">99</p>
+    <p class="date">2016</p>
     <p class="color">99</p>
   </div>
   
@@ -244,7 +242,7 @@
       <img class = "iconImage" src = "assets/Icons-27.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2016</p>
     <p class="color">99</p>
   </div>
 
@@ -252,7 +250,7 @@
       <img class = "iconImage" src = "assets/Icons-28.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2016</p>
     <p class="color">99</p>
   </div>
 
@@ -268,7 +266,7 @@
       <img class = "iconImage" src = "assets/Icons-30.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2018</p>
     <p class="color">30</p>
   </div>
   
@@ -276,7 +274,7 @@
       <img class = "iconImage" src = "assets/Icons-31.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2016</p>
     <p class="color">99</p>
   </div>
 
@@ -332,7 +330,7 @@
       <img class = "iconImage" src = "assets/Icons-38.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2016</p>
     <p class="color">99</p>
   </div>
   
@@ -340,7 +338,7 @@
       <img class = "iconImage" src = "assets/Icons-39.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2021</p>
     <p class="color">80</p>
   </div>
 
@@ -348,7 +346,7 @@
       <img class = "iconImage" src = "assets/Icons-40.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2016</p>
     <p class="color">99</p>
   </div>
   
@@ -356,7 +354,7 @@
       <img class = "iconImage" src = "assets/Icons-41.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2016</p>
     <p class="color">99</p>
   </div>
 
@@ -364,7 +362,7 @@
       <img class = "iconImage" src = "assets/Icons-42.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2017</p>
     <p class="color">55</p>
   </div>
   
@@ -372,7 +370,7 @@
       <img class = "iconImage" src = "assets/Icons-43.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2017</p>
     <p class="color">55</p>
   </div>
 
@@ -380,7 +378,7 @@
       <img class = "iconImage" src = "assets/Icons-44.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2017</p>
     <p class="color">55</p>
   </div>
 
@@ -388,7 +386,7 @@
       <img class = "iconImage" src = "assets/Icons-45.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2016</p>
     <p class="color">99</p>
   </div>
 
@@ -396,7 +394,7 @@
       <img class = "iconImage" src = "assets/Icons-46.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2016</p>
     <p class="color">99</p>
   </div>
   
@@ -404,7 +402,7 @@
       <img class = "iconImage" src = "assets/Icons-47.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2018</p>
     <p class="color">40</p>
   </div>
 
@@ -412,7 +410,7 @@
       <img class = "iconImage" src = "assets/Icons-48.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2018</p>
     <p class="color">60</p>
   </div>
   
@@ -420,7 +418,7 @@
       <img class = "iconImage" src = "assets/Icons-49.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2016</p>
     <p class="color">99</p>
   </div>
 
@@ -428,7 +426,7 @@
       <img class = "iconImage" src = "assets/Icons-50.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2016</p>
     <p class="color">99</p>
   </div>
   
@@ -436,7 +434,7 @@
       <img class = "iconImage" src = "assets/Icons-51.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2016</p>
     <p class="color">99</p>
   </div>
 
@@ -444,7 +442,7 @@
       <img class = "iconImage" src = "assets/Icons-52.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2018</p>
     <p class="color">40</p>
   </div>
 
@@ -508,7 +506,7 @@
       <img class = "iconImage" src = "assets/Icons-60.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2020</p>
     <p class="color">50</p>
   </div>
 
@@ -516,7 +514,7 @@
       <img class = "iconImage" src = "assets/Icons-61.png">
       </img>
     <h3 class="name">Lead</h3>
-    <p class="date">2019</p>
+    <p class="date">2020</p>
     <p class="color">50</p>
   </div>
 
@@ -837,13 +835,13 @@
 </div>
 <!--<br>
 <br>
-<br>
-<p style ="margin-left: 30px; color: #f2f2f2">Development and all icons by Denny Check</p>-->
+<br>-->
+<p style ="margin-left: 30px; color: #f2f2f2">Development and all icons by Denny Check</p>
 
 
 
  
-
+<!--scripts: spectrum, isotope, jQuery, bootstrap-->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
