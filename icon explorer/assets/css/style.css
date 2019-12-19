@@ -738,15 +738,15 @@ max-width: 200px;
 	  width: 25px;
 	}
 
-	.color-picker {
+.color-picker {
 		width: 135px;
-		background: #ffffff;
+		background: #F2F2F2;
 		height:90px;
 		padding: 5px;
-		border: 5px solid #fff;
-		position: sticky;
+		border: 5px solid #F2F2F2;
+		position: fixed;
 		top: 100px;
-		left: 55%;
+		left: 60%;
 		z-index: 5;
 	}
 

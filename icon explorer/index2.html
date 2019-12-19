@@ -22,7 +22,7 @@
 
 <!--navbar from Bootstrap documentation-->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light justify-content-center" style="background-color: #F2F2F2; height:80px;">
-      <a class="navbar-brand" href="#"><img src="assets/iconexplorer_animated3.gif" style="height: 47px;"></a>
+      <a class="navbar-brand" href="#"><img src="assets/iconexplorer_animated3.gif" style="height: 47px; margin-bottom: 2px;" onClick="refreshPage()"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -53,10 +53,11 @@
         </ul>
       </div>
     </nav>
-
-<div class="color-picker" id="color-picker" style="display: none"></div>
-    <div class="row">
-    <div id="div-bg"></div>
+<div class="color-picker-wrapper">
+  <div class="color-picker" id="color-picker" style="display: none"></div>
+      <div class="row">
+      <div id="div-bg"></div>
+  </div>
 </div>
 
 

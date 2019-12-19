@@ -8,6 +8,10 @@ $('.basic').spectrum({
     }
 });
 
+function refreshPage(){
+    window.location.reload();
+} 
+
 // init Isotope
 var $grid = $('.grid').isotope({
   itemSelector: '.element-item',
