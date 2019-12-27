@@ -1,399 +1,2927 @@
 <!DOCTYPE html>
 <html>
-	<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!-- load the google fonts and point to the style sheet -->
-		<meta charset="UTF-8">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
-		<title>Icon Explorer</title>
-	</head>
+    <!-- load the google fonts and point to the style sheets -->
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+    <title>Icon Explorer</title>
+    <link rel='icon' href="assets/smiley.png" type='image/x-icon'/ >
 
-	<header>
+  </head>
 
-
-	</header>
-
-	<body>
+  <header>
 
 
+  </header>
+
+  <body>
+
+<!--navbar from Bootstrap documentation-->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light justify-content-center" style="background-color: #F2F2F2; height:80px;">
-      <a class="navbar-brand" href="#">Icon Explorer</a>
+      <a class="navbar-brand" href="#"><img src="assets/iconexplorer_animated3.gif" style="height: 47px; margin-bottom: 2px;" onClick="refreshPage()"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
+
+<!--collapse navbar at small size-->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <!--nav items go in here-->
         <ul class="navbar-nav mr-auto position-absolute button-group" id="sorts" style="position: absolute;
-    left: 50%; transform: translatex(-50%); margin-top: 1px;">
-          <li class="nav-item px-2">
-              <button class="btn" data-sort-by="random" style="height: 50px; background-color: none;"><img class="img" src="assets/Icon-11.svg" style="height: 50px;"></button>
+    left: 50%; transform: translatex(-50%); margin-top: 1px; z-index: 10; background-color: #f2f2f2;">
+          <li class="nav-item px-3">
+              <button class="btn" data-sort-by="random" style="height: 50px; width: 50px; background-color: none;"><img class="img" src="assets/Icon-11.svg" style="height: 50px;"></button>
           </li>   
-          <li class="nav-item px-2">
-              <button class="btn" data-sort-by="color" style="height: 50px; background-color: none;"><img class="img" src="assets/Icon-10.svg" style="height: 50px;"></button>
+          <li class="nav-item px-3">
+              <button class="btn" data-sort-by="color" style="height: 50px; width: 50px; background-color: none;"><img class="img" src="assets/Icon-10.svg" style="height: 50px;"></button>
           </li>   
-          <li class="nav-item px-2">
-              <button class="btn" data-sort-by="date" style="height: 50px; background-color: none;"><img class="img" src="assets/Icon-12.svg" style="height: 50px;"></button>
-          </li>   
-          <li class="nav-item px-2">
-            <button id="color-picker-7" class="btn" style="margin-top: 12px; height: 26px; width: 26px; background-color: red; border-radius: 50%;"> 
-            </button>
+          <li class="nav-item px-3">
+              <button class="btn" data-sort-by="date" style="height: 50px; width: 50px; background-color: none;"><img class="img" src="assets/Icon-12.svg" style="height: 50px;"></button>
+          </li>    
+          <li class="nav-item px-3">
+            <div class="color-wrapper">
+              <!--<p>Choose color (# hex)</p>-->
+              <!--<input type="text" name="custom_color" placeholder="#FFFFFF" id="pickcolor" class="call-picker">-->
+              <div class="color-holder call-picker"></div>
+              <!--<div class="color-picker" id="color-picker" style="display: none"></div>-->
+            </div>
           </li>       
         </ul>
       </div>
     </nav>
-
-
-    <div class="row">
-    <div id="div-bg"></div>
+<div class="color-picker-wrapper">
+  <div class="color-picker" id="color-picker" style="display: none"></div>
+      <div class="row">
+      <div id="div-bg"></div>
+  </div>
 </div>
 
 
-
+<!--grid items, dynamic sort with Isotope functions-->
 <div class="grid">
 
-	<div class="element-item metal" data-category="transition">
-  		<img class = "iconImage" src = "assets/Icon_redRibbon.png">
-  		</img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="date">2019</p>
-    <p class="color">1</p>
-  </div>
-
- <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_purpleInfo.png">
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-02.png">
       </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
+      <div class="tooltip">
+        <span class="tooltiptext">Tooltip text</span>
+      </div>
+    <h3 class="name"></h3>
     <p class="date">2018</p>
-    <p class="color">95</p>
+    <p class="color">98</p>
   </div>
 
   <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_cyanPicture.png">
+      <img class = "iconImage" src = "assets/icons/icons1-03.png">
       </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">60</p>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
   </div>
 
   <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_yellowMic.png">
+      <img class = "iconImage" src = "assets/icons/icons1-04.png">
       </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">30</p>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
   </div>
 
   <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_orangeCalendar.png">
+      <img class = "iconImage" src = "assets/icons/icons1-05.png">
       </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">10</p>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
   </div>
 
   <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_greenMegaphone.png">
+      <img class = "iconImage" src = "assets/icons/icons1-06.png">
       </img>
-    <h3 class="name">Leadium</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">40</p>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
   </div>
 
   <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_blueNetwork.png">
+      <img class = "iconImage" src = "assets/icons/icons1-07.png">
       </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">70</p>
-  </div>
-
-    <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_magentaFlashcards.png">
-      </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">99</p>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
   </div>
 
   <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_redRibbon.png">
+      <img class = "iconImage" src = "assets/icons/icons1-08.png">
       </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-09.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-10.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-11.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-12.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-13.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-14.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-15.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
     <p class="color">1</p>
   </div>
 
- <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_purpleInfo.png">
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-16.png">
       </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">95</p>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">55</p>
   </div>
 
   <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_cyanPicture.png">
+      <img class = "iconImage" src = "assets/icons/icons1-17.png">
       </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">60</p>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">55</p>
   </div>
 
   <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_yellowMic.png">
+      <img class = "iconImage" src = "assets/icons/icons1-18.png">
       </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">30</p>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">55</p>
   </div>
 
   <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_orangeCalendar.png">
+      <img class = "iconImage" src = "assets/icons/icons1-19.png">
       </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">10</p>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
   </div>
 
   <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_greenMegaphone.png">
+      <img class = "iconImage" src = "assets/icons/icons1-20.png">
       </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">40</p>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
   </div>
 
   <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_blueNetwork.png">
+      <img class = "iconImage" src = "assets/icons/icons1-21.png">
       </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">70</p>
-  </div>
-
-    <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_magentaFlashcards.png">
-      </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">99</p>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
   </div>
 
   <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_redRibbon.png">
+      <img class = "iconImage" src = "assets/icons/icons1-22.png">
       </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-23.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-24.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-25.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-26.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-27.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-28.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-29.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-30.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-31.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-32.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">98</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-33.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
     <p class="color">1</p>
   </div>
 
- <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_purpleInfo.png">
-      </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">95</p>
-  </div>
-
   <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_cyanPicture.png">
+      <img class = "iconImage" src = "assets/icons/icons1-34.png">
       </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">60</p>
-  </div>
-
-  <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_yellowMic.png">
-      </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">30</p>
-  </div>
-
-  <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_orangeCalendar.png">
-      </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">10</p>
-  </div>
-
-  <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_greenMegaphone.png">
-      </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">40</p>
-  </div>
-
-  <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_blueNetwork.png">
-      </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">70</p>
-  </div>
-
-    <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_magentaFlashcards.png">
-      </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">99</p>
-  </div>
-
-  <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_redRibbon.png">
-      </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
     <p class="color">1</p>
   </div>
 
- <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_purpleInfo.png">
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-35.png">
       </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">95</p>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
   </div>
 
   <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_cyanPicture.png">
+      <img class = "iconImage" src = "assets/icons/icons1-36.png">
       </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">60</p>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
   </div>
 
   <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_yellowMic.png">
+      <img class = "iconImage" src = "assets/icons/icons1-37.png">
       </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-38.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-39.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">55</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-40.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-41.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-42.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-43.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-44.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-45.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-46.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-47.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-48.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-49.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-50.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-51.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-52.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-53.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-54.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-55.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-56.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-57.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-58.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-59.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-60.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-61.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-62.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-63.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-64.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-65.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-66.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-67.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-68.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-69.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-70.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-71.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-72.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-73.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-74.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-75.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-76.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-77.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-78.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-79.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">55</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-80.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-81.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-82.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-83.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-84.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-85.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-86.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-87.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-88.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-89.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-90.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-91.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-92.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-93.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-94.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-95.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-96.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-97.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-98.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-99.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">55</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons1-100.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-01.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-02.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-03.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-04.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-05.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-06.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-07.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-08.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-09.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-10.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-11.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-12.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-13.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">15</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-14.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-15.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-16.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-17.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-18.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-19.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-20.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-21.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">55</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-22.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">22</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-23.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">82</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-24.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-25.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-26.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">1</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-27.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">50</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-28.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">50</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-29.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">50</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-30.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">50</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-31.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
     <p class="color">30</p>
   </div>
 
   <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_orangeCalendar.png">
+      <img class = "iconImage" src = "assets/icons/icons2-32.png">
       </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">10</p>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
   </div>
 
   <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_greenMegaphone.png">
+      <img class = "iconImage" src = "assets/icons/icons2-33.png">
       </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">40</p>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
   </div>
 
   <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_blueNetwork.png">
+      <img class = "iconImage" src = "assets/icons/icons2-34.png">
       </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-    <p class="color">70</p>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
   </div>
 
-    <div class="element-item metal" data-category="transition">
-      <img class = "iconImage" src = "assets/Icon_magentaFlashcards.png">
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-35.png">
       </img>
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-36.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-37.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-38.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-39.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-40.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-41.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-42.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-43.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-44.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-45.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-46.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-47.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-48.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-49.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-50.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-51.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-52.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-53.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-54.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-55.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-56.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-57.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">30</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-58.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
     <p class="color">99</p>
   </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-59.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-60.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-61.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-62.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-63.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-64.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-65.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-66.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-67.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-68.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-69.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-70.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-71.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-72.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-73.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-74.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-75.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-76.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-77.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-78.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-79.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-80.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-81.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-82.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-83.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-84.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-85.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-86.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-87.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-88.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-89.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-90.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-91.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-92.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-93.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-94.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-95.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-96.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-97.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-98.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons2-99.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-01.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-02.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-03.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-04.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">45</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-05.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-06.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-07.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-08.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-09.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-10.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-11.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-12.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-13.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-14.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-15.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-16.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-17.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-18.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-19.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-20.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-21.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-22.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-23.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-24.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-25.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-26.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-27.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-28.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-29.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-30.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-31.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-32.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-33.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-34.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-35.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-36.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-37.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-38.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-39.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-40.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-41.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-42.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-43.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-44.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-45.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-46.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-47.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-48.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-49.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-50.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-51.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">60</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-52.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-53.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-54.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-55.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-56.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-57.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-58.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-59.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-60.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-61.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-62.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-63.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-64.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-65.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-66.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-67.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-68.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-69.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-70.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-71.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-72.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-73.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-74.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-75.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-76.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-77.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-78.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-79.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-80.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-81.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-82.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-83.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-84.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-85.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-86.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-87.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-88.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-89.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-90.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-91.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-92.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-93.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-94.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-95.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-96.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-97.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-98.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">75</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-99.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons3-100.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-01.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-02.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-03.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-04.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-05.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-06.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-07.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-08.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-09.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-10.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-11.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-12.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-13.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-14.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-15.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-16.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-17.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-18.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-19.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-20.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-21.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-22.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-23.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-24.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-25.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-26.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-27.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-28.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-29.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-30.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-31.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-32.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-33.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-34.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-35.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-36.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-37.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-38.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-39.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-40.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-41.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-42.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-43.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-44.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-45.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">90</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-46.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-47.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-48.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-49.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-50.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-51.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-52.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-53.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-54.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+  <div class="element-item metal" data-category="transition">
+      <img class = "iconImage" src = "assets/icons/icons4-55.png">
+      </img>
+    <h3 class="name"></h3>
+    <p class="date">2018</p>
+    <p class="color">99</p>
+  </div>
+
+
+
+
 
   
-</div>
-
-
 
 
  
 
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-	</body>
-  <script type ="text/javascript" src="assets/js/jquery.js"></script>
+
+</div>
+<!--<br>
+<br>
+<br>-->
+<p style ="margin-left: 30px; color: #ffffff; text-align: center; opacity: 35%;">Development and all icons by Denny Check</p>
+
+
+
+ 
+<!--scripts: spectrum, isotope, jQuery, bootstrap-->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
   <!--<script type ="text/javascript" src="bootstrap-colorpicker.js"></script>-->
   <script type ="text/javascript" src="assets/js/spectrum.js"></script>
+  <script type ="text/javascript" src="assets/js/isotope.js"></script>
+  <script type ="text/javascript" src="assets/js/script.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-	<script type ="text/javascript" src="assets/js/isotope.js"></script>
-	<script type ="text/javascript" src="assets/js/script.js"></script>
+  </body>
+
 
 </html>
